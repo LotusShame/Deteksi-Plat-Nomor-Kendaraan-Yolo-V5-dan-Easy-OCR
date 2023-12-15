@@ -100,6 +100,7 @@ if uploaded_image is not None:
                             angle = np.degrees(theta) - 90
                             rotated_plate = rotate_image(plate_image, angle)
                             st.image(rotated_plate, caption="Plat Nomor yang Sudah Terputar", use_column_width=True)
+                            
 
                             plate_text = recognize_license_plate(rotated_plate)
                             st.write("Plat Nomor:", plate_text)
